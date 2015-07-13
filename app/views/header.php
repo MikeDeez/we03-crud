@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Shopping Cart</title>
+	<title>A Blog About Nothing</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?=url('assets/css/style.css')?>">
 </head>
 <body>
 	<header>
 		<div class="container">
-			<h1>Catch 'Em All</h1>
+			<h1>A blog about nothing</h1>
 			<nav>
 				<ul>
 					<? if(Auth::is_logged_in()):?>
