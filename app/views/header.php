@@ -14,7 +14,7 @@
 				<ul>
 					<? if(Auth::is_logged_in()):?>
 						<li>
-							<a href="<?=url('admin')?>" class="btn btn-default">Admin</a>
+							<a href="<?=url('admin')?>" class="btn btn-default">Master Control</a>
 						</li>
 						<li>
 							<a href="<?=url('logout')?>" class="btn btn-default">Logout</a>

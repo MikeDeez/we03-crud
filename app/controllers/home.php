@@ -5,7 +5,6 @@
 $posts = new Posts_Collection();
 
 $posts->where('deleted', '0');
-$posts->order_by('id', 'asc');
 $posts->get();
 
 
