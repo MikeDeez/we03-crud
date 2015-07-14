@@ -30,8 +30,8 @@ require_once LIBRARIES.'xss.lib.php';
 # Load all models
 
 require_once MODELS.'user.model.php';
-require_once MODELS.'product.model.php';
-require_once MODELS.'products.collection.php';
+require_once MODELS.'post.model.php';
+require_once MODELS.'posts.collection.php';
 
 # Load the helpers and routes
 
