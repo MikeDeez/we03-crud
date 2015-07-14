@@ -11,3 +11,10 @@ Route::get('/logout', CONTROLLERS.'logout.php');
 Route::get('/login', CONTROLLERS.'login.php');
 Route::post('/login', CONTROLLERS.'login.php');
 
+
+
+
+
+
+Route::fallback(VIEWS.'404.php');
+
