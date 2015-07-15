@@ -1,14 +1,8 @@
-<?php #  controllers/home.php
+<?php #  controllers/logout.php
 
 # 1. Logic
 
-$posts = new Posts_Collection();
+Auth::log_out();
 
-$posts->where('deleted', '0');
-$posts->get();
-
-
-# 2. Load views
-include VIEWS.'header.php';
-include VIEWS.'posts_list.php';
-include VIEWS.'footer.php';
+# 2. REDIRECT
+URL::redirect(url('login'));

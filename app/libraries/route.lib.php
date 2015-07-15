@@ -31,7 +31,7 @@ RewriteRule ^(.*)$ index.php?/$1 [L]
 
 class Route {
 	
-	public static $params = [];
+	private static $params = [];
 	
 	public static function param($name){
 		return self::$params[$name];
@@ -45,18 +45,6 @@ class Route {
 	
 	public static function post($path, $file){
 		if($_SERVER['REQUEST_METHOD'] == 'POST'){
-			self::check($path, $file);
-		}
-	}
-	
-	public static function put($path, $file){
-		if($_SERVER['REQUEST_METHOD'] == 'PUT'){
-			self::check($path, $file);
-		}
-	}
-	
-	public static function delete($path, $file){
-		if($_SERVER['REQUEST_METHOD'] == 'DELETE'){
 			self::check($path, $file);
 		}
 	}
@@ -91,25 +79,15 @@ class Route {
 			}
 			
 			if($match){
-				if(strpos($file, '->') !== false){
-					$path = explode('->', $file);
-					
-					$c = new $path[0]();
-					
-					call_user_func([$c, $path[1]]);
-				} else {
-					# then require the file
-					require_once $file;
-					exit;
-				}
-				
+				# then require the file
+				require_once $file;
+				exit;
 			}
 			
 		}
 	}
 	
 	public static function fallback($file){
-		http_response_code(404);
 		require_once $file;
 		exit;
 	}

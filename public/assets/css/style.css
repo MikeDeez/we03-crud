@@ -28,6 +28,11 @@ header{
 	color: white;
 }
 
+header > h1  a, a:link, a:hover, a:visited, a:active{
+	text-decoration: none;
+	color: white;
+}
+
 header .container{
 	display:flex;
 	justify-content: space-between;
@@ -39,6 +44,7 @@ header ul{
 	padding: 0;
 	list-style: none;
 	display: flex;
+	content: initial;
 }
 
 header li{
@@ -49,4 +55,5 @@ header .container:before,
 header .container:after{
 	content: initial;
 }
+
 
