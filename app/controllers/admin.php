@@ -3,11 +3,13 @@
 
 #1. Logic
 
+Auth::kickout();
+
 $posts = new Posts_Collection();
 
-$products->where('deleted', '0');
-$products->order_by('id', 'asc');
-$products->get();
+$posts->where('deleted', '0');
+$posts->order_by('id', 'asc');
+$posts->get();
 
 #2. Load Views
 

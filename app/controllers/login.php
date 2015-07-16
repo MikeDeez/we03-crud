@@ -12,9 +12,10 @@ if(Input::posted()){
 
 	if($success){
 		Auth::log_in($user->id) == 1;
-		URL::redirect(url('admin'));
-	}else{
-		URL::redirect(url(''));
+		URL::redirect('admin');
+	}elseif($success){
+		Auth::log_in($user->id) > 1;
+		URL::redirect('home');
 	}
 }
 

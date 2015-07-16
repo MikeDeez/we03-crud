@@ -9,7 +9,9 @@
 <body>
 	<header>
 		<div class="container">
-			<h1><a href="/">A blog about nothing</a></h1>
+			<h1>
+				<a href="/">A blog about nothing</a>
+			</h1>
 			<nav>
 				<ul>
 					<? if(Auth::is_logged_in()):?>
