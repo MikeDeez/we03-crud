@@ -10,17 +10,17 @@ $post->load(Route::param('id'));
 
 if(Input::posted()){
 
-	$product->fill(Input::all());
+	$post->fill(Input::all());
 
-	$product->save();
+	$post->save();
 
 	URL::redirect('admin');
 }
 
-Sticky::set('subject', $product->subject);
-Sticky::set('content', $product->content);
+Sticky::set('subject', $post->subject);
+Sticky::set('content', $post->content);
 
-$title = 'Edit Post: '.$product->subject;
+$title = 'Edit Post: '.$post->subject;
 
 #2. Load Views
 
