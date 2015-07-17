@@ -2,7 +2,7 @@
 
 #1. Logic
 
-Auth::kickout();
+Auth::kickout_non_admin();
 
 $post = new Post();
 
@@ -14,7 +14,7 @@ if(Input::posted()){
 
 	$post->save();
 
-	URL::redirect('admin');
+	URL::redirect('/admin');
 }
 
 Sticky::set('subject', $post->subject);

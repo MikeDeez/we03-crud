@@ -4,13 +4,7 @@
 	<meta charset="UTF-8">
 	<title>A Blog About Nothing</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/style.css">
-	<script src="//tinymce.cachefly.net/4.2/tinymce.min.js"></script>
-	<script type="text/javascript">
-        tinymce.init({
-            selector: "textarea"
-        });
-    </script>
+	<link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
 	<header>

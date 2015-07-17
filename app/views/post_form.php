@@ -5,13 +5,13 @@
 
 	<?=Form::open()?>
 
-		<div class="form-group">
+		<div class="form-group" id="register-form">
 			<?=Form::label('subject', 'Subject')?>
 			<?=Form::text('subject', Sticky::get('subject'), 
 				['class' => 'form-control'])?>
 		</div>
 
-		<div class="form-group">
+		<div class="form-group" id="register-form">
 			<?=Form::label('content', 'Content')?>
 			<?=Form::textarea('content', Sticky::get('Content'), 
 				['class' => 'form-control'])?>

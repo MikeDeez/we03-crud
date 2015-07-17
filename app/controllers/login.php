@@ -10,11 +10,14 @@ if(Input::posted()){
 	
 	$success = $user->authenticate();
 
+
+
+
 	if($success){
-		Auth::log_in($user->id) == 1;
+		Auth::log_in($user->id, $user->is_admin);
 		URL::redirect('admin');
 	}elseif($success){
-		Auth::log_in($user->id) > 1;
+		Auth::log_in($user->id);
 		URL::redirect('home');
 	}
 }

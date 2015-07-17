@@ -2,7 +2,7 @@
 
 #1. Logic 
 
-Auth::kickout();
+Auth::kickout_non_admin();
 
 $post = new Post();
 
@@ -12,4 +12,4 @@ $post->delete();
 
 #2. Redirect
 
-URL::redirect('admin');
+URL::redirect('/admin');

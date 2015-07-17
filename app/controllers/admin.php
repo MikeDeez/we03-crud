@@ -3,7 +3,7 @@
 
 #1. Logic
 
-Auth::kickout();
+Auth::kickout_non_admin();
 
 $posts = new Posts_Collection();
 

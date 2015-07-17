@@ -2,7 +2,7 @@
 
 # 1. Logic
 
-Auth::kickout();
+Auth::kickout_non_admin();
 
 if(Input::posted()){
 
