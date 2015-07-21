@@ -6,7 +6,7 @@
 	<?=Form::open()?>
 		<div class="form-group">
 			<?=Form::label('username', 'Username/Email')?>
-			<?=Form::text('username', Sticky::get('username', 'email'), 
+			<?=Form::text('username', Sticky::get('username'), 
 				[
 					'class' => 'form-control',
 				])

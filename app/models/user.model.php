@@ -7,7 +7,7 @@ class User extends Model{
 	public function authenticate(){
 		$user = $this->db->select('*')
 			->from($this->table)
-			->where('username', $this->username OR $this->email)
+			->where('username', $this->username)
 			->get_one();
 
 		if(!$user){
