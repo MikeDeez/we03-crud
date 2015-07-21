@@ -10,6 +10,11 @@ class User extends Model{
 			->where('username', $this->username)
 			->get_one();
 
+		$user = $this->db->select('*')
+			->from($this->table)
+			->where('email', $this->username)
+			->get_one();
+
 		if(!$user){
 			return false;
 		}
