@@ -7,27 +7,41 @@
 		<div class="form-group">
 			<?=Form::label('username', 'Username')?>
 			<?=Form::text('username', Sticky::get('username'), 
-				['class' => 'form-control'])
+				[
+					'class' 	=> 'form-control',
+					'required' 	=> 'required',
+					'minlength' => 4
+				])
 			?>
 		</div>
 
 		<div class="form-group">
 			<?=Form::label('email', 'Email')?>
-			<?=Form::text('email', Sticky::get('email'), 
-				['class' => 'form-control'])
+			<?=Form::email('email', Sticky::get('email'), 
+				[
+					'class' 	=> 'form-control',
+					'required' 	=> 'required',
+				])
 			?>
 		</div>
 
 			<div class="form-group">
 			<?=Form::label('password', 'Password')?>
 			<?=Form::password('password', '', 
-				['class' => 'form-control'])
+				[
+					'class' 	=> 'form-control',
+					'required' 	=> 'required',
+					'minlength' =>  3
+				])
 			?>
 		</div>
 
 		<div class="form-group">
 			<?=Form::submit('Register', 
-				['class' => 'btn btn-primary'])
+				[
+					'class' 	=> 'btn btn-primary',
+					'required' 	=> 'required'
+				])
 			?>
 		</div>
 

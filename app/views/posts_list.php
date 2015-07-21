@@ -1,5 +1,4 @@
 <div class="container">
-
 		<div class="posts flex flex-j-between">
 			<?foreach($posts->items as $post):?>
 				<div class="post">

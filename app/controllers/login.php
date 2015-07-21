@@ -10,9 +10,6 @@ if(Input::posted()){
 	
 	$success = $user->authenticate();
 
-
-
-
 	if($success){
 		Auth::log_in($user->id, $user->is_admin);
 		URL::redirect('admin');
@@ -21,7 +18,6 @@ if(Input::posted()){
 		URL::redirect('home');
 	}
 }
-
 
 #2. Load views
 

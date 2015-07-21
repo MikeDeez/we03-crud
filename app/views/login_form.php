@@ -5,10 +5,10 @@
 
 	<?=Form::open()?>
 		<div class="form-group">
-			<?=Form::label('username', 'Username')?>
-			<?=Form::text('username', Sticky::get('username'), [
-				'class' => 'form-control',
-				'id' => 'register-form'
+			<?=Form::label('username', 'Username/Email')?>
+			<?=Form::text('username', Sticky::get('username', 'email'), 
+				[
+					'class' => 'form-control',
 				])
 
 			?>
@@ -16,17 +16,18 @@
 
 		<div class="form-group">
 			<?=Form::label('password', 'Password')?>
-			<?=Form::password('password', '', [
-				'class' => 'form-control',
-				'id' => 'register-form'
+			<?=Form::password('password', '', 
+				[
+					'class' => 'form-control',
 				])
 			?>
 		</div>
 
+
 		<div class="form-group">
-			<?=Form::submit('Login',[
-				'class' => 'btn btn-primary',
-				'id' => 'register-form'
+			<?=Form::submit('Login',
+				[
+					'class' => 'btn btn-primary',
 				])
 			?>
 		</div>
