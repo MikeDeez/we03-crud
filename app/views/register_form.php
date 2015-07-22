@@ -4,13 +4,21 @@
 	<hr>
 
 	<?=Form::open()?>
+	<?php if ($error): ?>
+		<div class="alert alert-danger" role="alert">
+			<span class="glyphicon glyphicon-remove"></span>
+			<?=$error?>
+		</div>
+		
+	<?php endif ?>
 		<div class="form-group">
 			<?=Form::label('username', 'Username')?>
 			<?=Form::text('username', Sticky::get('username'), 
 				[
 					'class' 	=> 'form-control',
 					'required' 	=> 'required',
-					'minlength' => 4
+					'minlength' => 4,
+					'placeholder' => 'Req.* (min. 4 characters)'
 				])
 			?>
 		</div>
@@ -21,6 +29,7 @@
 				[
 					'class' 	=> 'form-control',
 					'required' 	=> 'required',
+					'placeholder' => 'Req.* (example@example.com)'
 				])
 			?>
 		</div>
@@ -31,7 +40,8 @@
 				[
 					'class' 	=> 'form-control',
 					'required' 	=> 'required',
-					'minlength' =>  3
+					'minlength' =>  4,
+					'placeholder' => 'Req.* (min. 4 characters)'
 				])
 			?>
 		</div>
