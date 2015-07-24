@@ -20,5 +20,9 @@ Route::post('/:id/edit', CONTROLLERS.'edit_post.php');
 
 Route::get('/:id/delete', CONTROLLERS.'delete_post.php');
 
+Route::get('/:id/:subject', CONTROLLERS.'post.php');
+
+
+
 Route::fallback(VIEWS.'404.php');
 

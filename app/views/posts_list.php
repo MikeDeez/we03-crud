@@ -1,5 +1,8 @@
 <div class="container">
-		<div class="posts flex flex-j-between">
+		<?if(Auth::is_admin()):?>
+			<a href="<?='/create'?>" class="btn btn-primary">Create a new post</a>
+		<?endif;?>	
+		<div class="posts flex flex-j-center flex-a-center">
 			<?foreach($posts->items as $post):?>
 				<div class="post jumbotron container">
 						<h1><?=$post->subject?></h1>
