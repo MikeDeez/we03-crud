@@ -2,8 +2,6 @@
 
 #1. Logic
 
-
-
 if(Input::posted()){
 
 	$check = new User();

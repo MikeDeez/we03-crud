@@ -8,17 +8,24 @@
 		<div class="form-group">
 			<?=Form::label('subject', 'Subject')?>
 			<?=Form::text('subject', Sticky::get('subject'), 
-				['class' => 'form-control'])?>
+				[
+					'class' => 'form-control'
+				])?>
 		</div>
 
 		<div class="form-group">
 			<?=Form::label('content', 'Content')?>
 			<?=Form::textarea('content', Sticky::get('Content'), 
-				['class' => 'form-control'])?>
+				[
+					'class' => 'form-control',
+					'id'	=>	'summernote'
+				])?>
 		</div>
 
 		<?=Form::submit('Save', 
-			['class' => 'btn btn-primary']) ?>
+			[
+				'class' => 'btn btn-primary'
+			])?>
 
 	<?=Form::close()?>
 

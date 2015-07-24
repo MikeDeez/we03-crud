@@ -4,6 +4,8 @@
 
 Auth::kickout_non_admin();
 
+
+
 if(Input::posted()){
 
 	$post = new Post();
