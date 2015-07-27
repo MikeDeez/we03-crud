@@ -22,7 +22,7 @@ if(Input::posted()){
 		Auth::log_in($user->id);
 
 	} else {
-		$error =  '  A user with that username/email already exists  ';
+		$error =  'A user with that username/email already exists';
 	}
 
 	

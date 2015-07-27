@@ -15,7 +15,7 @@
 
 		<div class="form-group">
 			<?=Form::label('content', 'Content')?>
-			<?=Form::textarea('content', Sticky::get('Content'), 
+			<?=Form::textarea('content', Sticky::get('content'), 
 				[
 					'class' => 'form-control',
 					'id'	=>	'summernote'

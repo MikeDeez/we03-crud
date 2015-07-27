@@ -11,12 +11,12 @@
 	flex-direction: row;
 }
 
-.flex-j-between{
-	justify-content: space-between;
+.flex-col{
+	flex-direction: column;
 }
 
-.flex-a-center{
-	justify-content: center;
+.flex-j-between{
+	justify-content: space-between;
 }
 
 .flex-a-center{
@@ -69,6 +69,13 @@ i{
 	padding-right: 0.2em;
 }
 
+.wrapper {
+	max-width: 1200px;
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+}
+
 .jumbotron{
 	background: initial;
 }
@@ -76,6 +83,14 @@ i{
 .post{
 	width: 100%;
 	height: 100%;
-	margin: 2em;
+	margin: 1em;
+}
+
+td > img{
+	width: 100px;
+}
+
+img{
+	width: 100%;
 }
 
