@@ -8,7 +8,6 @@ $posts->where('deleted', '0');
 $posts->order_by('id', 'asc');
 $posts->get();
 
-
 # 2. Load views
 include VIEWS.'header.php';
 include VIEWS.'posts_list.php';
