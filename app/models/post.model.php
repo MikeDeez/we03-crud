@@ -1,5 +1,13 @@
 <?php # post.model.php
 
 class Post extends Model{
-	protected $table = 'posts';
+	public $table = 'posts';
+
+	public function author(){
+		return $this->belongsTo('User');
+	}
+
+	public function comments(){
+		return $this->hasMany('Comment');
+	}
 }

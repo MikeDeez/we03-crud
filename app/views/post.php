@@ -1,6 +1,6 @@
 <div class="container">
 		<div class="posts flex flex-col flex-j-center flex-a-center">
-			<?$user=new User(); $user->load($post->user_id = '1');?>
+			<?$user=new User(); $user->load($post->user_id);?>
 				<div class="post jumbotron">
 					<div class="container">
 						<h1><?=$post->subject?></h1>

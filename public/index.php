@@ -29,9 +29,12 @@ require_once LIBRARIES.'xss.lib.php';
 
 # Load all models
 
+
 require_once MODELS.'user.model.php';
 require_once MODELS.'post.model.php';
+require_once MODELS.'comment.model.php';
 require_once MODELS.'posts.collection.php';
+require_once MODELS.'comments.collection.php';
 
 # Load the helpers and routes
 

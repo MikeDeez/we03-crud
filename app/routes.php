@@ -20,7 +20,12 @@ Route::post('/:id/edit', CONTROLLERS.'edit_post.php');
 
 Route::get('/:id/delete', CONTROLLERS.'delete_post.php');
 
-Route::get('/:subject', CONTROLLERS.'page.php');
+Route::get('/post/:id', CONTROLLERS.'post.php');
+
+
+Route::post('/post/:id/comment', CONTROLLERS.'add_comment.php');
+
+Route::get('/post/:id/delete', CONTROLLERS.'delete_comment.php');
 
 
 

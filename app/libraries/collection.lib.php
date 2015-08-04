@@ -20,8 +20,9 @@ require_once 'model.lib.php';
 class Collection {
 
 	public     $items  = array();
+	public     $table  = '';
+	public     $model  = null;
 	protected  $db     = null;
-	protected  $table  = '';
 
 	/**
 	*
@@ -52,19 +53,41 @@ class Collection {
 	*	@param string $field The field to qualify which records are retrieved
 	*	
 	*/
-	public function get() {
+	public function get($modelType = null) {
+		if(!is_null($modelType)){
+			$m = new $modelType();
+			$this->table = $m->table;
+		} else if(!is_null($this->model)){
+			$m = new $this->model();
+			$this->table = $m->table;
+		}
+		
 		$this->items = [];
 		
 		$this->db->select('*')->from($this->table);
-
-		$this->items = $this->db->get();
 		
-		foreach($this->items as $key => $item){
-			$model = new Model($this->table, false);
+		$q = $this->db->build_query();
+		
+		if(Model_Provider::has($q)){
+			$this->items = Model_Provider::get($q);
+		}else{
+			$this->items = $this->db->get();
 			
-			$model->fill($item);
+			foreach($this->items as $key => $item){
+				if(!is_null($modelType)){
+					$model = new $modelType();
+				} else if(!is_null($this->model)){
+					$model = new $this->model();
+				} else {
+					$model = new Model($this->table, false);
+				}
+				
+				$model->fill($item);
+				
+				$this->items[$key] = $model;
+			}
 			
-			$this->items[$key] = $model;
+			Model_Provider::set($q, $this->items);
 		}
 	}
 	

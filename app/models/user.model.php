@@ -2,7 +2,7 @@
 
 class User extends Model{
 	
-	protected $table = 'users';
+	public $table = 'users';
 
 	public function authenticate(){
 		$user = $this->db->select('*')
