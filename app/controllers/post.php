@@ -9,7 +9,7 @@ $comments = new Comments_Collection();
 
 $comments->where('deleted', '0');
 $comments->where('post_id', Route::param('id'));
-$comments->order_by('id', 'asc');
+$comments->order_by('id', 'desc');
 $comments->get();
 
 

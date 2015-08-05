@@ -1,6 +1,6 @@
 <div class="container">
 	
-	<h2>Admin</h2>
+	<h2 class="title">Admin</h2>
 	<hr>
 	
 	<div class="flex flex-j-between flex-a-center">

@@ -2,7 +2,7 @@
 
 # 1. Logic
 
-if(Auth::is_logged_in()){
+if(Auth::user_id()){
 
 	$comment = new Comment();
 

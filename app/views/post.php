@@ -7,6 +7,8 @@
 						<small>Posted by <?=$user->username?> on <i class="fa fa-clock-o"></i><?=date("l, d F Y", strtotime($post->date))?></small> 
 						<p><?=$post->content?></p>
 						<hr>
+						<a href="https://twitter.com/MykuDeez" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false">Follow @MykuDeez</a>
+						
 					</div>
 				</div>
 		</div>

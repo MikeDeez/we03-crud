@@ -4,7 +4,7 @@
 			<?$user=new User(); $user->load($post->user_id = '1');?>
 				<div class="post jumbotron">
 					<div class="container">
-						<h1><a href="<?='/post/'.$post->id?>"><?=$post->subject?></a></h1>
+						<h1 class="title"><a href="<?='/post/'.$post->id?>"><?=$post->subject?></a></h1>
 						<small>Posted by <?=$user->username?> on <i class="fa fa-clock-o"></i><?=date("l, d F Y", strtotime($post->date))?></small> 
 						<p><?=$post->content?></p>
 						<?if(Auth::is_admin()):?>
@@ -12,6 +12,7 @@
 							<a href="<?=$post->id.'/delete'?>" class="btn btn-danger btn-sm">Delete</a>
 						<?endif;?>
 						<hr>
+						<a href="https://twitter.com/MykuDeez" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false">Follow @MykuDeez</a>
 					</div>
 				</div>
 			<?endforeach;?>
