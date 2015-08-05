@@ -37,8 +37,10 @@ h1, h2, h3{
 header{
 	background: #ECECEC;
 	height: 80px;
-	box-shadow: 0px 3px 97px -19px rgba(0,0,0,0.46);
 	color: white;
+	-webkit-box-shadow: 0px 4px 10px 0px rgba(50, 50, 50, 0.20);
+	-moz-box-shadow:    0px 4px 10px 0px rgba(50, 50, 50, 0.20);
+	box-shadow:         0px 4px 10px 0px rgba(50, 50, 50, 0.20);
 }
 
 header .container{
