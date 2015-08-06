@@ -30,6 +30,5 @@ Route::post('/edit_comment/:id', CONTROLLERS.'edit_comment.php');
 Route::get('/delete_comment/:id', CONTROLLERS.'delete_comment.php');
 
 
-
 Route::fallback(VIEWS.'404.php');
 
