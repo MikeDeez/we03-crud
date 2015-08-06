@@ -2,6 +2,8 @@
 
 # 1. Logic
 
+Auth::kickout();
+
 if(Auth::is_logged_in()){
 
 	$comment = new Comment();

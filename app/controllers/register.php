@@ -25,9 +25,11 @@ if(Input::posted()){
 		$error =  'A user with that username/email already exists';
 	}
 
-	
+	URL::redirect('/');
 	
 }
+
+
 
 #2. Load Views
 

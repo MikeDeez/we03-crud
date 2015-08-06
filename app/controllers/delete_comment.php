@@ -2,15 +2,13 @@
 
 # 1. Logic
 
-if(Auth::user_id()){
+$comment = new Comment();
 
-	$comment = new Comment();
+$comment->load(Route::param('id'));
 
-	$comment->post_id = Route::param('id');
-
-	$comment->load(Route::param('post_id'));
+if(Auth::user_id() == $comment->user_id){
 
 	$comment->delete();
 }
 
-URL::redirect('/post/'.Route::param('id'));
+URL::redirect('/post/'.$comment->post_id);

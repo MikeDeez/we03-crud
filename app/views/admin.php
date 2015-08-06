@@ -13,18 +13,18 @@
 		<tr>
 			<th>Subject</th>
 			<th>Content</th>
-			<th>Edit/Delete</th>
+			<th>Action</th>
 		</tr>
 
 		<?foreach($posts->items as $post):?>
 		<tr>
 			<td><?=$post->subject?></td>
-			<td max-width="100" max-height="100">
+			<td width="auto" class="flex">
 				<?=$post->content?>
 			</td>
-			<td max-height="50">
-				<a href="<?=$post->id.'/edit'?>" class="btn btn-info">Edit</a>
-				<a href="<?=$post->id.'/delete'?>" class="btn btn-danger">Delete</a>
+			<td class="admin" class="flex flex-row">
+				<a href="<?=$post->id.'/edit'?>" class="btn btn-link">Edit</a>
+				<a href="<?=$post->id.'/delete'?>" class="btn btn-link">Delete</a>
 			</td>
 		</tr>
 		<?endforeach?>
