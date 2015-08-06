@@ -11,8 +11,8 @@
 			</td>
 			<td><p><?=$comment->content?></p></td>
 			<?if(Auth::is_admin()):?>
-				<td></td>
-				<td><a href="<?=$comment->post_id.'/delete'?>" class="btn btn-link btn-sm">Delete</a></td>
+				<td><a href="<?=$comment->post_id.'/edit_comment/'.$comment->id?>" class="btn btn-link">Edit</a></td>
+				<td><a href="<?=$comment->post_id.'/delete_comment/'.$comment->id?>" class="btn btn-link">Delete</a></td>
 			<?elseif(Auth::user_id() == $comment->user_id):?>
 				<td><a href="<?=$comment->post_id.'/edit_comment/'.$comment->id?>" class="btn btn-link">Edit</a></td>
 				<td><a href="<?=$comment->post_id.'/delete_comment/'.$comment->id?>" class="btn btn-link">Delete</a></td>

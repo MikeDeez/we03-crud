@@ -4,15 +4,6 @@
 	<hr>
 
 	<?=Form::open()?>
-
-		<div class="form-group">
-			<?=Form::label('subject', 'Subject')?>
-			<?=Form::text('subject', Sticky::get('subject'), 
-				[
-					'class' => 'form-control'
-				])?>
-		</div>
-
 		<div class="form-group">
 			<?=Form::label('content', 'Content')?>
 			<?=Form::textarea('content', Sticky::get('content'), 
@@ -27,5 +18,4 @@
 			])?>
 
 	<?=Form::close()?>
-
 </div>
