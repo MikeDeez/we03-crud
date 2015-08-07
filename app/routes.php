@@ -24,10 +24,10 @@ Route::get('/post/:id', CONTROLLERS.'post.php');
 
 Route::post('/post/:id/comment', CONTROLLERS.'add_comment.php');
 
-Route::get('/edit_comment/:id', CONTROLLERS.'edit_comment.php');
-Route::post('/edit_comment/:id', CONTROLLERS.'edit_comment.php');
+Route::get('/:id/edit', CONTROLLERS.'edit_comment.php');
+Route::post('/:id/edit', CONTROLLERS.'edit_comment.php');
 
-Route::get('/delete_comment/:id', CONTROLLERS.'delete_comment.php');
+Route::get('/post/:id/delete', CONTROLLERS.'delete_comment.php');
 
 
 
