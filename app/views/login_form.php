@@ -3,6 +3,13 @@
 	<h2>Login</h2>
 	<hr>
 
+	<?if($error): ?>
+		<div class="alert alert-danger" role="alert">
+			<span class="glyphicon glyphicon-remove"></span>
+			<?=$error?>
+		</div>
+	<?endif;?>	
+	
 	<?=Form::open()?>
 		<div class="form-group">
 			<?=Form::label('username', 'Username/Email')?>

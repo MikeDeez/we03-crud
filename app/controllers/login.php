@@ -16,7 +16,10 @@ if(Input::posted()){
 	}elseif($success){
 		Auth::log_in($user->id);
 		URL::redirect('home');
+	}else{
+		$error = "Incorrect credentials, please re-enter credentials";
 	}
+
 }
 
 #2. Load views

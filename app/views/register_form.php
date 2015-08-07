@@ -4,13 +4,12 @@
 	<hr>
 
 	<?=Form::open()?>
-	<?php if ($error): ?>
+	<?if($error): ?>
 		<div class="alert alert-danger" role="alert">
 			<span class="glyphicon glyphicon-remove"></span>
 			<?=$error?>
 		</div>
-		
-	<?php endif ?>
+	<?endif;?>
 		<div class="form-group">
 			<?=Form::label('username', 'Username')?>
 			<?=Form::text('username', Sticky::get('username'), 
