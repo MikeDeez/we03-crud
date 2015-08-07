@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
 		<div class="posts flex flex-col flex-j-center flex-a-center">
 			<?$user=new User(); $user->load($post->user_id = '1');?>
 				<div class="jumbotron">
