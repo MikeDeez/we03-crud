@@ -7,7 +7,6 @@ $comment = new Comment();
 $comment->load(Route::param('id'));
 
 if(Auth::user_id() == $comment->user_id){
-
 	$comment->delete();
 }
 
